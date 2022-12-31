@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 
+import { AiOutlineMenu } from "react-icons/ai";
+
 export default function Navbar(props) {
   const menuToggle = () => {
     $(".link-container").slideToggle("slow");
@@ -17,7 +19,9 @@ export default function Navbar(props) {
         <Link to="/">{props.logo}</Link>
       </div>
       <div className="navLinks">
-        <div className="menu" onClick={menuToggle}></div>
+        <button className="menu" onClick={menuToggle}>
+          <AiOutlineMenu />
+        </button>
 
         <ul className="link-container">
           <li>

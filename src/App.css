@@ -85,6 +85,9 @@ p {
   width: 100%;
 }
 
+.menu {
+  display: none;
+}
 /* Navbar End */
 
 /* Inputbox Start */
@@ -283,22 +286,26 @@ footer ul {
   }
 
   .menu {
-    width: 3rem;
-    height: 2px;
-    background-color: var(--black);
-    box-shadow: 3px 0.5rem 0 0 var(--black);
+    display: block;
+    background-color: var(--red);
+    font-size: 2rem;
   }
   .link-container {
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: 4rem;
-    right: 0.4rem;
+    top: 5rem;
+    right: 0rem;
     background-color: var(--red);
     padding: 2rem;
     gap: 1rem;
     display: none;
   }
+
+  .link-container li {
+    margin: 1rem 0;
+  }
+
   .about > p {
     width: 100%;
     text-align: left;

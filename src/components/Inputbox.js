@@ -4,16 +4,13 @@ export default function Inputbox(props) {
   const [text, setText] = useState("");
 
   const capCase = () => {
-    // let textArry = [""];
-    // let newText = text
-    //   .split(" ")
-    //   .map((word) => word[0])
-    //   .join(" ")
-    //   .toUpperCase();
+    const newText = text.toLowerCase().split(" ");
 
-    // textArry.push(newText);
+    for (let i = 0; i < newText.length; i++) {
+      newText[i] = newText[i][0].toUpperCase() + newText[i].toString(1);
+    }
 
-    console.log("Disabled");
+    setText(newText.join(" "));
   };
 
   const upCase = () => {
