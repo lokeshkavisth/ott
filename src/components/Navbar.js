@@ -6,6 +6,11 @@ export default function Navbar(props) {
   const menuToggle = () => {
     $(".link-container").slideToggle("slow");
   };
+
+  const clicked = () => {
+    $(".link-container").slideUp("slow");
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -16,16 +21,24 @@ export default function Navbar(props) {
 
         <ul className="link-container">
           <li>
-            <Link to="/">{props.home}</Link>
+            <Link to="/" onClick={clicked}>
+              {props.home}
+            </Link>
           </li>
           <li>
-            <Link to="/about">{props.about}</Link>
+            <Link to="/about" onClick={clicked}>
+              {props.about}
+            </Link>
           </li>
           <li>
-            <a href="#userguide">{props.userguide}</a>
+            <a href="#userguide" onClick={clicked}>
+              {props.userguide}
+            </a>
           </li>
           <li>
-            <a href="#contact">{props.contact}</a>
+            <a href="#contact" onClick={clicked}>
+              {props.contact}
+            </a>
           </li>
         </ul>
       </div>
